@@ -1,5 +1,6 @@
 import React from 'react'
 import laundry from '../../assets/laundry.jpg'
+import { Link } from 'react-router-dom'
 
 const OrderServices = () => {
   return (
@@ -11,6 +12,7 @@ const OrderServices = () => {
           Convenient pickup and delivery to save you time. High-quality cleaning
           to keep you looking your best.
         </p>
+        <Link to='/pickup' className='bg-[#5e6ed9] mt-8 py-3 px-8 rounded-3xl font-medium inline-block mr-4 hover:bg-transparent duration-300 border hover:border-[#8766f5] hover:border border-transparent'>Request Pick-up</Link>
       </div>
       {/* Right Section: Image */}
       <div className="flex-1">

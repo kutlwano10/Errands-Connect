@@ -6,7 +6,7 @@ import OrderServices from "./Landing-page/CardServices";
 const Layout = () => {
   return (
     <div>
-      <div className="md:min-h-full bg-[url('./assets/image.png')] bg-center bg-cover px-[9%] relative">
+      <div className="md:min-h-full bg-[url('./assets/Image.png')] bg-center bg-cover px-[9%] relative">
         <Header />
         <Hero />
       </div>
