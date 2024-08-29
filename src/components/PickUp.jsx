@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 
 const LaundryPickup = () => {
   const [name, setName] = useState('');
@@ -6,10 +7,23 @@ const LaundryPickup = () => {
   const [pickupDate, setPickupDate] = useState('');
   const [instructions, setInstructions] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
     // Handle form submission, e.g., send data to server
-    console.log({ name, address, pickupDate, instructions });
+    
+    try {
+      console.log({ name, address, pickupDate, instructions });
+    const response = await axios.post('http://localhost:3000/pickup', {
+      name,
+      address,
+      pickupDate,
+      instructions
+    });
+    console.log('Pickup request sent:', response.data);
+  } catch (error) {
+    console.error('Error sending pickup request:', error);
+  }
+
   };
 
   return (
