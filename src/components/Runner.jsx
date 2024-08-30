@@ -17,15 +17,15 @@ function Runner() {
 
     ws.onmessage = (event) => {
       const data = JSON.parse(event.data);
-      if (data.clientId) {
+    //   if (data.clientId) {
         // Store the assigned client ID
-        setClientId(data.clientId);
-        console.log(`Assigned Client ID: ${data.clientId}`);
-      } else {
+        // setClientId(data.clientId);
+    //     console.log(`Assigned Client ID: ${data.clientId}`);
+    //   } else {
         // Handle received data
         setReceivedData(data);
         console.log('Received data:', data);
-      }
+    //   }
     };
 
     ws.onclose = () => {
@@ -37,7 +37,30 @@ function Runner() {
     };
   }, []);
 
+ return (
+    <>
+    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+    <div className="w-full max-w-md p-8 space-y-6 bg-white rounded-lg shadow-md">
+        <p>
+             {receivedData && (
+        <div>
+          <h2>Received Data:</h2>
+          <pre>{JSON.stringify(receivedData, null, 2)}</pre>
+        </div>
+      )}
+      </p>
 
+      <p>
+      {!receivedData && (
+        <div>
+          <h2>No pickUp requests received</h2>
+        </div>
+      )}
+      </p>
+    </div>
+    </div>
+    </>
+ )
 
 }
 
