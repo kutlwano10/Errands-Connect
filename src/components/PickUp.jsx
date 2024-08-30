@@ -13,13 +13,9 @@ const Pickup = () => {
     // Handle form submission, e.g., send data to server
     
     try {
-      console.log({ name, address, pickupDate,runner, instructions });
     const response = await axios.post('http://localhost:3000/pickup', {
-      name,
-      address,
-      pickupDate,
       runner,
-      instructions
+      data:  { name, address, pickupDate,instructions}
     });
     console.log('Pickup request sent:', response.data);
   } catch (error) {
