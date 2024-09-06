@@ -39,7 +39,20 @@ const Header = () => {
             <img className="w-6 h-6 md:w-8 md:h-8" src={logo} alt="" />
             <Link to='..' className="text-2xl font-semibold">Errands</Link>
           </div>
+<<<<<<< HEAD
           <div className="md:hidden relative left-[50%]">
+=======
+        </div>
+
+        {/* Left */}
+        <div className="flex items-center gap-3 ">
+        
+          <NavLink>
+            <img className="w-7" src={profile} alt="" />
+          </NavLink>
+          <Link to='/runner'>Deliver</Link>
+          <div className="md:hidden">
+>>>>>>> c90c5a76dfdc21e7328721372a86b1f93702fe10
             <svg
               onClick={toggleNavbar}
               width="32px"

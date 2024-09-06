@@ -13,8 +13,13 @@
     "axios": "^1.7.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+<<<<<<< HEAD
     "react-icons": "^5.3.0",
     "react-router-dom": "^6.26.0"
+=======
+    "react-router-dom": "^6.26.0",
+    "ws": "^8.18.0"
+>>>>>>> c90c5a76dfdc21e7328721372a86b1f93702fe10
   },
   "devDependencies": {
     "@eslint/js": "^9.8.0",
