@@ -1,30 +1,31 @@
-import React from 'react'
-import laundry from '../../assets/laundry.jpg'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Link } from "react-router-dom";
+import PickUpButton from "./PickUpButton";
 
-const OrderServices = () => {
+const CardServices = ({title, image, description, }) => {
   return (
-    <div className="flex items-center p-6 bg-white rounded-lg shadow-md">
-      {/* Left Section: Icon, Heading, and Description */}
-      <div className="flex-1">
-        <h2 className="text-2xl font-semibold mb-2">Dry Cleaning</h2>
-        <p className="text-gray-600">
-          Convenient pickup and delivery to save you time. High-quality cleaning
-          to keep you looking your best.
-        </p>
-        <Link to='/pickup' className='bg-[#5e6ed9] mt-8 py-3 px-8 rounded-3xl font-medium inline-block mr-4 hover:bg-transparent duration-300 border hover:border-[#8766f5] hover:border border-transparent'>Request Pick-up</Link>
+    <>
+      <div className="flex flex-col md:flex-row mt-5 items-center p-6 px-[9%] bg-white rounded-lg ">
+        {/* Left Section: Icon, Heading, and Description */}
+        <div className="flex-1 md:mr-6">
+          <h2 className="text-3xl text-gray-800 font-semibold mb-8 text-center ">
+            {title}
+          </h2>
+          <p className="text-gray-600 text-center">
+            {description}
+          </p>
+          <PickUpButton />
+        </div>
+        {/* Right Section: Image */}
+        <div className="flex-1 mt-6 md:mt-0 ">
+          <img src={image} alt={title} className="rounded-lg " />
+        </div>
       </div>
-      {/* Right Section: Image */}
-      <div className="flex-1">
-        {/* Replace 'imageUrl' with the path to your actual image */}
-        <img
-          src={laundry}
-          alt="Dry Cleaning Service"
-          className="rounded-lg"
-        />
+      <div className="px-[9%]">
+        <hr className="border-t-2 mx-auto border-gray-300 my-4  w-[70%] "/>
       </div>
-    </div>
-  )
-}
+    </>
+  );
+};
 
-export default OrderServices
+export default CardServices;

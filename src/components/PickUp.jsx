@@ -27,9 +27,9 @@ const LaundryPickup = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+    <div className="min-h-screen flex items-center justify-center relative top-[64px] ">
       <div className="w-full max-w-md p-8 space-y-6 bg-white rounded-lg shadow-md">
-        <h1 className="text-2xl font-bold text-center text-gray-700">Request Laundry Pickup</h1>
+        <h1 className="text-2xl font-bold text-center text-gray-700">Request For Pick Up</h1>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label className="block text-sm font-medium text-gray-600">Name</label>
@@ -43,7 +43,18 @@ const LaundryPickup = () => {
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-600">Address</label>
+            <label className="block text-sm font-medium text-gray-600">From Location</label>
+            <input
+              type="address"
+              value={address}
+              onChange={(e) => setAddress(e.target.value)}
+              className="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="Enter Your Location"
+              required
+            />
+          </div>
+          {/* <div>
+            <label className="block text-sm font-medium text-gray-600">To </label>
             <input
               type="address"
               value={address}
@@ -52,7 +63,7 @@ const LaundryPickup = () => {
               placeholder="Your address"
               required
             />
-          </div>
+          </div> */}
           <div>
             <label className="block text-sm font-medium text-gray-600">Pickup Date</label>
             <input

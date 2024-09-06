@@ -1,8 +1,7 @@
-# React + Vite
+# Errand Connect
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- This is the Errand Connect Website, Where a customer will sign up and Download the Apllication and Find out all the information about the application. 
 
-Currently, two official plugins are available:
+- It will include the Heading, Hero section , Footer ,About us, Contact us, How The App Works Section(included in the presentation file)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- I will create A PWA for this site. 
