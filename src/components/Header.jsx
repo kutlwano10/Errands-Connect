@@ -29,6 +29,7 @@ const Header = () => {
           <NavLink>
             <img className="w-7" src={profile} alt="" />
           </NavLink>
+          <Link to='/runner'>Deliver</Link>
           <div className="md:hidden">
             <svg
               width="32px"
