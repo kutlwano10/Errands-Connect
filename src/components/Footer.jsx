@@ -4,7 +4,7 @@ import logo from "../assets/logo.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-white border-t border-gray-200 mt-[px] absolute bottom-[-999] w-[100%]">
+    <footer className="bg-white border-t border-gray-200 mt-[100px] absolute bottom-[-999] w-[100%]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Upper Footer Section */}
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center space-y-8 lg:space-y-0">

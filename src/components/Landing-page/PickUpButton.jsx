@@ -21,7 +21,7 @@ const PickUpButton = () => {
 
     {/* Arrow Button */}
     <NavLink
-      to="/pickup"
+      to="https://errands-connect-app.vercel.app/"
       className="flex items-center justify-center w-12 h-12 bg-[#8766f5] rounded-full text-white"
     >
       ➔

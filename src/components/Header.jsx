@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
-import logo from "../assets/logo.png";
+import logo from "../assets/errands-logo4.png";
 import cart from "../assets/white-cart.png";
 import profile from "../assets/white-profile.png";
 const Header = () => {
@@ -12,71 +12,49 @@ const Header = () => {
       : dropDown.classList.add("hidden");
   };
 
-  const [isActive, setIsActive] = useState(false)
-
-  useEffect(()=> {
-    const handleScroll =()=>{
-      if(window.scrollY > 20) {
-        setIsActive(true)
-      }else {
-        setIsActive(false)
-      }
-      window.addEventListener("scroll", handleScroll)
-
-    }
-    return()=> {
-      window.removeEventListener("scroll", handleScroll)
-    }
-
-  }, [])
-
+ 
 
   return (
-    <header className={`header ${isActive ? "active" : ""} py-4 fixed z-10 top-0 w-[100%] `}  >
+    <header
+      className={` py-6 fixed z-10 top-0 w-[100%] bg-black/85 `}
+    >
       <nav className="text-[#F2F2F2] md:flex  items-center px-[9%] md:justify-between">
-        <div className="flex items-center gap-2  ">
-          <div className="flex gap-1  items-center justify-center">
-            <img className="w-6 h-6 md:w-8 md:h-8" src={logo} alt="" />
-            <Link to='..' className="text-2xl font-semibold">Errands</Link>
+        <div className="hidden md:flex items-center gap-2  ">
+          <div className="flex gap-1  items-center ">
+            <img className="object-cover w-32" src={logo} alt="" />
+            
           </div>
-<<<<<<< HEAD
-          <div className="md:hidden relative left-[50%]">
-=======
         </div>
 
-        {/* Left */}
-        <div className="flex items-center gap-3 ">
-        
-          <NavLink>
-            <img className="w-7" src={profile} alt="" />
-          </NavLink>
-          <Link to='/runner'>Deliver</Link>
-          <div className="md:hidden">
->>>>>>> c90c5a76dfdc21e7328721372a86b1f93702fe10
-            <svg
-              onClick={toggleNavbar}
-              width="32px"
-              height="32px"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fillRule="evenodd"
-                clipRule="evenodd"
-                d="M4 5C3.44772 5 3 5.44772 3 6C3 6.55228 3.44772 7 4 7H20C20.5523 7 21 6.55228 21 6C21 5.44772 20.5523 5 20 5H4ZM7 12C7 11.4477 7.44772 11 8 11H20C20.5523 11 21 11.4477 21 12C21 12.5523 20.5523 13 20 13H8C7.44772 13 7 12.5523 7 12ZM13 18C13 17.4477 13.4477 17 14 17H20C20.5523 17 21 17.4477 21 18C21 18.5523 20.5523 19 20 19H14C13.4477 19 13 18.5523 13 18Z"
-                fill="#ffffff"
-              />
-            </svg>
-          </div>
-        </div>
+        <div className="md:hidden flex  items-center ">
+            <div className=" ">
+              <img className="w-32" src={logo} alt="" />
+              
+            </div>
+            
+              <div className="md:hidden ml-auto">
+                <svg
+                  onClick={toggleNavbar}
+                  width="32px"
+                  height="32px"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M4 5C3.44772 5 3 5.44772 3 6C3 6.55228 3.44772 7 4 7H20C20.5523 7 21 6.55228 21 6C21 5.44772 20.5523 5 20 5H4ZM7 12C7 11.4477 7.44772 11 8 11H20C20.5523 11 21 11.4477 21 12C21 12.5523 20.5523 13 20 13H8C7.44772 13 7 12.5523 7 12ZM13 18C13 17.4477 13.4477 17 14 17H20C20.5523 17 21 17.4477 21 18C21 18.5523 20.5523 19 20 19H14C13.4477 19 13 18.5523 13 18Z"
+                    fill="#ffffff"
+                  />
+                </svg>
+              </div>
+            </div>
 
         <div className="flex items-center gap-3 ">
           <NavLink className="hidden md:block">
             <img className="w-7" src={profile} alt="" />
-
           </NavLink>
-          
 
           {/* DropDown Menu */}
           <div
